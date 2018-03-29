@@ -1,0 +1,96 @@
+/* justify-content: flex-start flex-end center space-around
+space-between space-evenly */
+
+
+/* responsive navbar */
+#responsiveNavbar {
+  border: 5px solid #ffcc5c;
+  display: flex;
+}
+
+.search {
+  font-family: 'IBM Plex Mono', monospace;
+  flex: 1;
+  font: 2em;
+}
+
+@media all and (max-width: 600px) {
+  #responsiveNavbar {
+    flex-wrap: wrap;
+  }
+  #responsiveNavbar > li{
+    flex: 1 1 50%;
+  }
+  .search > input {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 400px) {
+  #responsiveNavbar > li{
+    flex: 1 1 100%;
+  }
+  .search {
+    order: 1;
+  }
+}
+
+
+/* make images same size */
+.imageBox {
+  border: 5px solid #ffcc5c;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin: 1%;
+}
+
+/* center: align-items: center;
+          justify-content: center;*/
+#textHeader h2 {
+  color: #96ceb4;
+  border: 5px solid #ffcc5c;
+  display: flex;
+  justify-content: center;
+}
+
+/* flex-wrap */
+#textSection {
+  color: #ff6f69;
+  border: 5px solid #ffcc5c;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#footer {
+  border: 5px solid #ffcc5c;
+  display: flex;
+  margin-top: 2%;
+}
+#footer > div {
+  flex: 1;
+}
+
+/*footer order */
+.item1 {
+  order: 4;
+}
+
+.item2 {
+  order: 3;
+}
+
+.item3 {
+  order: 2;
+}
+
+item4 {
+  order: 1;
+}
